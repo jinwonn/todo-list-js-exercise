@@ -22,7 +22,12 @@ function newTask(title, description) {
 // // Mark a task as complete by setting the task's status in the `taskComplete` array to `true`
 // function completeTask(taskIndex) {
 //   taskComplete[taskIndex] = true;
-// }
+// }ß
+
+// marks the provided task as completed
+function completeTask(task) {
+  task.complete = true;
+}
 
 // // Print the state of a task to the console in a nice readable way
 // function logTaskState(taskIndex) {
@@ -30,6 +35,11 @@ function newTask(title, description) {
 //   const complete = taskComplete[taskIndex];
 //   console.log(`${title} has${complete ? " " : " not "}been completed`);
 // }
+
+// prints out the provided task's details
+function logTaskState(task) {
+  console.log(`${task.title} has${task.complete ? " " : " not "}been completed`);
+}
 
 // DRIVER CODE BELOW
 
@@ -47,4 +57,5 @@ logTaskState(task1); // Clean Cat Litter has not been completed
 completeTask(task1);
 logTaskState(task1); // Clean Cat Litter has been completed
 
-console.log(tasks);
+// console.log(tasks);
+
